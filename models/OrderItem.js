@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const orderItemSchema = new mongoose.Schema({
-  order: { type: mongoose.Schema.Types.ObjectId, ref: 'Order', required: true },
-  product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
-  unitprice: { type: Number, required: true },
-  quantity: { type: Number, required: true },
+  order: { type: mongoose.Schema.Types.ObjectId, ref: 'Order'},
+  product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product'},
+  unitprice: { type: Number},
+  quantity: { type: Number},
 });
 
 const OrderItem = mongoose.model('OrderItem', orderItemSchema);
